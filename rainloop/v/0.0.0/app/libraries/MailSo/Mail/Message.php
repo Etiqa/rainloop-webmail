@@ -95,6 +95,11 @@ class Message
 	/**
 	 * @var \MailSo\Mime\EmailCollection
 	 */
+	private $oXOriginalTo;
+
+	/**
+	 * @var \MailSo\Mime\EmailCollection
+	 */
 	private $oTo;
 
 	/**
@@ -211,6 +216,7 @@ class Message
 		$this->oSender = null;
 		$this->oReplyTo = null;
 		$this->oDeliveredTo = null;
+		$this->oXOriginalTo = null;
 		$this->oTo = null;
 		$this->oCc = null;
 		$this->oBcc = null;
@@ -437,6 +443,14 @@ class Message
 	/**
 	 * @return \MailSo\Mime\EmailCollection
 	 */
+	public function XOriginalTo()
+	{
+		return $this->oXOriginalTo;
+	}
+
+	/**
+	 * @return \MailSo\Mime\EmailCollection
+	 */
 	public function To()
 	{
 		return $this->oTo;
@@ -618,6 +632,7 @@ class Message
 			$this->oSender = $oHeaders->GetAsEmailCollection(\MailSo\Mime\Enumerations\Header::SENDER, $bCharsetAutoDetect);
 			$this->oReplyTo = $oHeaders->GetAsEmailCollection(\MailSo\Mime\Enumerations\Header::REPLY_TO, $bCharsetAutoDetect);
 			$this->oDeliveredTo = $oHeaders->GetAsEmailCollection(\MailSo\Mime\Enumerations\Header::DELIVERED_TO, $bCharsetAutoDetect);
+			$this->oXOriginalTo = $oHeaders->GetAsEmailCollection(\MailSo\Mime\Enumerations\Header::X_ORIGINAL_TO, $bCharsetAutoDetect);
 
 			$this->sInReplyTo = $oHeaders->ValueByName(\MailSo\Mime\Enumerations\Header::IN_REPLY_TO);
 			$this->sReferences = \MailSo\Base\Utils::StripSpaces(

@@ -9884,6 +9884,7 @@ NewThemeLink IncludeCss LoadingDescriptionEsc TemplatesLink LangLink IncludeBack
 					'Bcc' => $this->responseObject($mResponse->Bcc(), $sParent, $aParameters),
 					'Sender' => $this->responseObject($mResponse->Sender(), $sParent, $aParameters),
 					'DeliveredTo' => $this->responseObject($mResponse->DeliveredTo(), $sParent, $aParameters),
+					'XOriginalTo' => $this->responseObject($mResponse->XOriginalTo(), $sParent, $aParameters),
 					'Priority' => $mResponse->Priority(),
 					'Threads' => $mResponse->Threads(),
 					'Sensitivity' => $mResponse->Sensitivity(),

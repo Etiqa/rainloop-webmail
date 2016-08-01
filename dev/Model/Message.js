@@ -55,6 +55,7 @@
 		this.to = [];
 		this.cc = [];
 		this.bcc = [];
+		this.xOriginalTo = [];
 		this.replyTo = [];
 		this.deliveredTo = [];
 
@@ -155,6 +156,7 @@
 		this.to = [];
 		this.cc = [];
 		this.bcc = [];
+		this.xOriginalTo = [];
 		this.replyTo = [];
 		this.deliveredTo = [];
 
@@ -270,6 +272,7 @@
 			this.to = MessageHelper.emailArrayFromJson(oJsonMessage.To);
 			this.cc = MessageHelper.emailArrayFromJson(oJsonMessage.Cc);
 			this.bcc = MessageHelper.emailArrayFromJson(oJsonMessage.Bcc);
+			this.xOriginalTo = MessageHelper.emailArrayFromJson(oJsonMessage.XOriginalTo);
 			this.replyTo = MessageHelper.emailArrayFromJson(oJsonMessage.ReplyTo);
 			this.deliveredTo = MessageHelper.emailArrayFromJson(oJsonMessage.DeliveredTo);
 
@@ -465,6 +468,16 @@
 	MessageModel.prototype.bccToLine = function (bFriendlyView, bWrapWithLink)
 	{
 		return MessageHelper.emailArrayToString(this.bcc, bFriendlyView, bWrapWithLink);
+	};
+
+	/**
+	 * @param {boolean} bFriendlyView
+	 * @param {boolean=} bWrapWithLink = false
+	 * @return {string}
+	 */
+	MessageModel.prototype.xOriginalToToLine = function (bFriendlyView, bWrapWithLink)
+	{
+		return MessageHelper.emailArrayToString(this.xOriginalTo, bFriendlyView, bWrapWithLink);
 	};
 
 	/**
@@ -835,6 +848,7 @@
 			this.to = oMessage.to;
 			this.cc = oMessage.cc;
 			this.bcc = oMessage.bcc;
+			this.xOriginalTo = oMessage.xOriginalTo;
 			this.replyTo = oMessage.replyTo;
 			this.deliveredTo = oMessage.deliveredTo;
 

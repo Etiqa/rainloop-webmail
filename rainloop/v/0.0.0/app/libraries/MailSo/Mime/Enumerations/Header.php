@@ -31,6 +31,7 @@ class Header
 	const SENDER = 'Sender';
 	const RETURN_PATH = 'Return-Path';
 	const DELIVERED_TO = 'Delivered-To';
+	const X_ORIGINAL_TO = 'X-Original-To';
 
 	const MESSAGE_ID = 'Message-ID';
 	const IN_REPLY_TO = 'In-Reply-To';

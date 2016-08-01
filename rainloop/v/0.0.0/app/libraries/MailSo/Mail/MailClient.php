@@ -199,6 +199,7 @@ class MailClient
 			\MailSo\Mime\Enumerations\Header::SENDER,
 			\MailSo\Mime\Enumerations\Header::REPLY_TO,
 			\MailSo\Mime\Enumerations\Header::DELIVERED_TO,
+			\MailSo\Mime\Enumerations\Header::X_ORIGINAL_TO,
 			\MailSo\Mime\Enumerations\Header::IN_REPLY_TO,
 			\MailSo\Mime\Enumerations\Header::REFERENCES,
 			\MailSo\Mime\Enumerations\Header::DATE,

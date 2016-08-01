@@ -133,6 +133,7 @@ en:
     LABEL_TO_SHORT: "to"
     LABEL_CC: "CC"
     LABEL_BCC: "BCC"
+    LABEL_X_ORIGINAL_TO: "For"
     LABEL_REPLY_TO: "Reply-To"
     PRINT_LABEL_FROM: "From"
     PRINT_LABEL_TO: "To"

@@ -130,6 +130,7 @@ it_IT:
     LABEL_TO_SHORT: "a"
     LABEL_CC: "CC"
     LABEL_BCC: "CCN"
+    LABEL_X_ORIGINAL_TO: "Per"
     LABEL_REPLY_TO: "Rispondi a"
     PRINT_LABEL_FROM: "Da"
     PRINT_LABEL_TO: "A"
